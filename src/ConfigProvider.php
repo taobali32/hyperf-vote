@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-namespace Jtar\HyperfFollow;
+namespace Jtar\HyperfVote;
 
 class ConfigProvider
 {
@@ -19,15 +19,15 @@ class ConfigProvider
             'publish' => [
                 [
                     'id' => 'config',
-                    'description' => 'The config for follow.',
-                    'source' => __DIR__ . '/../publish/follow.php',
-                    'destination' => BASE_PATH . '/config/autoload/follow.php',
+                    'description' => 'The config for vote.',
+                    'source' => __DIR__ . '/../publish/vote.php',
+                    'destination' => BASE_PATH . '/config/autoload/vote.php',
                 ],
                 [
                     'id' => 'sql',
                     'description' => 'The config for follow.sql',
-                    'source' => __DIR__ . '/../publish/migrations/2022_11_10_193313_create_followables_table.php',
-                    'destination' => BASE_PATH . '/migrations/2022_11_10_193313_create_followables_table.php',
+                    'source' => __DIR__ . '/../publish/migrations/2022_11_10_193313_create_votes_table.php',
+                    'destination' => BASE_PATH . '/migrations/2022_11_10_193313_create_votes_table.php',
                 ],
             ],
         ];

@@ -1,17 +1,17 @@
 {
-    "name": "jtar/hyperf-follow",
+    "name": "jtar/hyperf-vote",
     "type": "library",
     "license": "MIT",
     "keywords": [
         "php",
         "hyperf",
-        "关注",
-        "follow"
+        "点赞",
+        "vote"
     ],
     "description": "关注/取消关注包",
     "autoload": {
         "psr-4": {
-            "Jtar\\HyperfFollow\\": "src/"
+            "Jtar\\HyperfVote\\": "src/"
         }
     },
     "autoload-dev": {
@@ -46,7 +46,7 @@
     },
     "extra": {
         "hyperf": {
-            "config": "Jtar\\HyperfFollow\\ConfigProvider"
+            "config": "Jtar\\HyperfVote\\ConfigProvider"
         }
     }
 }
