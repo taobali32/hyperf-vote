@@ -13,7 +13,7 @@ trait Votable
 {
     public function hasBeenVotedBy(Model $user): bool
     {
-        if (\is_a($user, config('auth.providers.users.model'))) {
+        if (\is_a($user, \config('vote.user_model'))) {
             if ($this->relationLoaded('voters')) {
                 return $this->voters->contains($user);
             }
@@ -43,7 +43,7 @@ trait Votable
     public function voters()
     {
         return $this->belongsToMany(
-            config('auth.providers.users.model'),
+            \config('vote.user_model'),
             config('vote.votes_table'),
             'votable_id',
             config('vote.user_foreign_key')
