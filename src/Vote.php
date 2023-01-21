@@ -42,7 +42,7 @@ class Vote extends Model
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(\config('auth.providers.users.model'), \config('vote.user_foreign_key'));
+        return $this->belongsTo(\config('vote.user_model'), \config('vote.user_foreign_key'));
     }
 
     public function voter(): BelongsTo

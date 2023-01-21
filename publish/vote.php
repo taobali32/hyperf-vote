@@ -7,6 +7,9 @@ return [
      */
     'user_foreign_key' => 'user_id',
 
+    'user_model' => '',
+
+
     /**
      * If uses table use uuid as primary, please set to true.
      */
