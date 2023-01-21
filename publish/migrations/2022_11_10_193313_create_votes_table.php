@@ -17,6 +17,11 @@ class CreateVotesTable extends Migration
             $table->unsignedBigInteger(config('vote.user_foreign_key', 'user_id'))->index()->comment('user_id');
 
             $table->integer('votes');
+
+            $table->integer('votable_id');
+            $table->integer('votable_type');
+
+
             $table->morphs('votable');
             $table->timestamps();
         });
